@@ -95,3 +95,68 @@ random_list = range(5)
 println(random_list[0]) # 0
 
 ```
+# Some useful functions
+## String
+**string.num()**  
+Returns the string as a number. If it can't be parsed as a number, he throws an error.
+Example use:
+```py
+age = '20'
+num = age.num()
+println(num)
+```
+
+**string.len()**  
+Returns the string's length **as a number**.  
+Example use:
+```py
+text = 'foo'
+println("Foo contains " + text.len().string() + " characters.")
+```
+
+**string.chararray()**  
+Returns the string as a list.  
+**Note:** In future versions this method will no longer exist, and will be replaced with **string.char_list()**  
+Example use:
+```py
+text = 'foo'
+text_chars = text.chararray()
+text_chars[0] = 'b' # ['b', 'o', 'o']
+```
+
+## List
+**list.string()**  
+Returns the list as a string, so it can be **concatenated** among other strings.  
+Example use:
+```py
+random_list = [1, 2, 3]
+# println("List: " + random_list) # does not work
+println("List: " + random_list.string()) # List: [1, 2, 3]
+```
+
+**list.append(element)**  
+Appends an element to the list.  
+Example use:
+```py
+list = [1, 2, 3]
+list.append(4)
+println(list) # [1, 2, 3, 4]
+```
+
+**list.len()**  
+Returns the list's length **as a number**.  
+Example use:
+```py
+list = [1, 2, 3]
+println(list.len()) # 3
+```
+
+## Number
+BulletScript does not do any distinction between floats and integers, he just assumes it is a number and continues.
+**number.string()**  
+Returns the number as a string, so you can **concatenate** it among other strings.  
+Example use:
+```py
+age = 20
+println("Age: " + age.string())
+```
