@@ -84,7 +84,7 @@ class Lexer:
                 continue
         
             match self.char:
-                case '@':
+                case '#':
                     while self.char != '\n':
                         self.advance()
                 case '+':
