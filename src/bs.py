@@ -1,4 +1,4 @@
-﻿import token_types as tt
+import token_types as tt
 import random, string, sys, os
 
 class Error:
@@ -548,6 +548,9 @@ class Parser:
                     return self.parse_function_definition()
                 case 'return':
                     self.advance()
+                    if self.current_tok.type == tt.NEWLINE:
+                        return ReturnNode(None)
+
                     return_value = self.expr()
                     return ReturnNode(return_value)
                 case 'break':
@@ -1227,6 +1230,9 @@ class Interpreter:
         return List(new_elements)
 
     def visit_ReturnNode(self, node):
+        if node.value == None:
+            raise ExitFunction(Boolean(None))
+
         raise ExitFunction(self.visit(node.value))
 
     def visit_ContinueNode(self, node):
