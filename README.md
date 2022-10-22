@@ -1,3 +1,14 @@
+# The BulletScript project will not be maintained anymore.
+Thanks to everyone who visited this repository. BulletScript was a project that I created
+to learn parsing, lexing, interpreting, AST and other interesting concepts.
+
+I am currently working on a more serious project called Luneuse, implemented in C 
+and will also be interpreted. Repository will be published when further progress is
+made.
+
+You can still send pull requests to bullet-script and it is likely that they will get
+accepted. So do not fear and feel free!
+
 # Welcome to the BulletScript Documentation!
 ## Introduction
 BulletScript is a scripting language developed by "ademyro" in August 2022.
